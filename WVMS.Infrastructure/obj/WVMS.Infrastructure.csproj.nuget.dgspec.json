@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Infrastructure\\WVMS.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Infrastructure\\WVMS.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Infrastructure\\WVMS.Infrastructure.csproj",
+        "projectName": "WVMS.Infrastructure",
+        "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Infrastructure\\WVMS.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\13539\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\13539\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

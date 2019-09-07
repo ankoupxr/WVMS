@@ -1,0 +1,12 @@
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\bin\Debug\netcoreapp2.2\WVMS.Infrastructure.deps.json
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\bin\Debug\netcoreapp2.2\WVMS.Infrastructure.dll
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\bin\Debug\netcoreapp2.2\WVMS.Infrastructure.pdb
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\obj\Debug\netcoreapp2.2\WVMS.Infrastructure.csprojAssemblyReference.cache
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\obj\Debug\netcoreapp2.2\WVMS.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\obj\Debug\netcoreapp2.2\WVMS.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\obj\Debug\netcoreapp2.2\WVMS.Infrastructure.AssemblyInfo.cs
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\obj\Debug\netcoreapp2.2\WVMS.Infrastructure.csproj.CopyComplete
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\obj\Debug\netcoreapp2.2\WVMS.Infrastructure.dll
+C:\Users\13539\Desktop\1\WVMS\WVMS.Infrastructure\obj\Debug\netcoreapp2.2\WVMS.Infrastructure.pdb

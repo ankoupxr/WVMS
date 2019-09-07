@@ -1,0 +1,450 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Service\\WVMS.Service.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Core\\WVMS.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Core\\WVMS.Core.csproj",
+        "projectName": "WVMS.Core",
+        "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Core\\WVMS.Core.csproj",
+        "packagesPath": "C:\\Users\\13539\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\13539\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Model\\WVMS.Model.csproj": {
+                "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Model\\WVMS.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Infrastructure\\WVMS.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Infrastructure\\WVMS.Infrastructure.csproj",
+        "projectName": "WVMS.Infrastructure",
+        "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Infrastructure\\WVMS.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\13539\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\13539\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IRepository\\WVMS.IRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IRepository\\WVMS.IRepository.csproj",
+        "projectName": "WVMS.IRepository",
+        "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IRepository\\WVMS.IRepository.csproj",
+        "packagesPath": "C:\\Users\\13539\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\13539\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Model\\WVMS.Model.csproj": {
+                "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Model\\WVMS.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IService\\WVMS.IService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IService\\WVMS.IService.csproj",
+        "projectName": "WVMS.IService",
+        "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IService\\WVMS.IService.csproj",
+        "packagesPath": "C:\\Users\\13539\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IService\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\13539\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IRepository\\WVMS.IRepository.csproj": {
+                "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IRepository\\WVMS.IRepository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Model\\WVMS.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Model\\WVMS.Model.csproj",
+        "projectName": "WVMS.Model",
+        "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Model\\WVMS.Model.csproj",
+        "packagesPath": "C:\\Users\\13539\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\13539\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Infrastructure\\WVMS.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Infrastructure\\WVMS.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Repository\\WVMS.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Repository\\WVMS.Repository.csproj",
+        "projectName": "WVMS.Repository",
+        "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Repository\\WVMS.Repository.csproj",
+        "packagesPath": "C:\\Users\\13539\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\13539\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Core\\WVMS.Core.csproj": {
+                "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Core\\WVMS.Core.csproj"
+              },
+              "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IRepository\\WVMS.IRepository.csproj": {
+                "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IRepository\\WVMS.IRepository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.0.19, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Service\\WVMS.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Service\\WVMS.Service.csproj",
+        "projectName": "WVMS.Service",
+        "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Service\\WVMS.Service.csproj",
+        "packagesPath": "C:\\Users\\13539\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\13539\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IService\\WVMS.IService.csproj": {
+                "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.IService\\WVMS.IService.csproj"
+              },
+              "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Repository\\WVMS.Repository.csproj": {
+                "projectPath": "C:\\Users\\13539\\Desktop\\1\\WVMS\\WVMS.Repository\\WVMS.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+﻿@{
+    ViewData["Title"] = "添加";
+}
+@section scriptstop
+    {
+    <script type="text/javascript" charset="utf-8" src="~/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="~/ueditor/ueditor.all.min.js"></script>
+}
+<div class="layui-bgn" style="padding-bottom:20px;">
+    <form class="layui-form" style="padding: 20px 40px 0 0;">
+        <div class="layui-form-item">
+            <label class="layui-form-label">文章标题</label>
+            <div class="layui-col-xs10">
+                <input type="text" name="Title" lay-verify="required" class="layui-input">
+            </div>
+            <div class="layui-tips-danger">
+                *必填
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">附标题</label>
+            <div class="layui-col-xs10">
+                <input type="text" name="subTitle" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属栏目</label>
+            <div class="layui-col-xs10" id="channel">
+                <input type="hidden" id="channelId" class="layui-input" />
+                <input type="text" id="channelName" placeholder="请选择文章所属栏目" class="layui-input" />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">文章来源</label>
+            <div class="layui-col-xs10">
+                <input type="text" name="BeFrom" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">文章内容</label>
+            <div class="layui-col-xs10">
+                <textarea id="Description" style="width:100%; height:200px" name="Description"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">关键词</label>
+            <div class="layui-col-xs10">
+                <input type="text" name="keywords" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">缩略图</label>
+            <div class="layui-upload">
+                <div class="layui-col-xs10">
+                    <button type="button" class="layui-btn" id="img">上传图片</button>
+                    <div class="layui-upload-list">
+                        <img class="layui-upload-img" id="imgShow" width="100" height="100">
+                    </div>
+                    <input type="hidden" name="ImageUrl" id="ImageUrl">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">外部连接</label>
+            <div class="layui-col-xs10">
+                <input type="text" name="LinkUrl" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">备注</label>
+            <div class="layui-col-xs10">
+                <textarea name="Remark" class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">顺序</label>
+            <div class="layui-col-xs10">
+                <input type="text" name="Sort" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">类型</label>
+            <div class="layui-col-xs10">
+                <select id="Type" name="Type" lay-verify="required">
+                    <option value="">内容类型</option>
+                    <option value="0">文章</option>
+                    <option value="1">视频</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-input-inline">
+
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-col-xs4"></div>
+            <div class="layui-col-xs4">
+                <button class="layui-btn" lay-submit lay-filter="add" id="submit" type="button">提交</button>
+                <button id="close" type="button" class="layui-btn layui-btn-primary">关闭</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section scriptsfeet
+        {
+    <script type="text/javascript">
+        layui.config({
+            base: '/layuiadmin/' //自定义模块路径
+        }).use(['form', 'layer', 'ankou','upload'], function () {
+            var $ = layui.$, form = layui.form,
+                ankou = layui.ankou, upload = layui.upload;
+
+            $("#close").click(function () {
+                ankou.close();
+            });
+
+
+            form.on('submit(add)', function (obj) {
+                obj.field.stockinId = $("#stockinId").val();
+                //保存
+                sykjwh.save('@Url.Action("stockinadd", "stockin")', obj.field);
+            });
+        });
+
+        //实例化编辑器
+        var ue = UE.getEditor('Description', {autoHeightEnabled: false});
+
+    </script>
+}
+

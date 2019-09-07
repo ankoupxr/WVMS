@@ -1,0 +1,38 @@
+﻿@model RegisterViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>注册</title>
+    <link href="~/layui/css/layui.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>注册用户</h1>
+    <form class="lay-form" asp-action="Signup" method="post">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="layui-input-block">
+            <label asp-for="Username">用 户 名</label>
+            <input asp-for="Username" />
+            <span asp-validation-for="Username"></span>
+        </div>
+        <div class="layui-input-block">
+            <label asp-for="Password">密 &nbsp;&nbsp;&nbsp;&nbsp;码</label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="layui-input-block">
+            <label asp-for="ConfirmPassword">确认密码</label>
+            <input asp-for="ConfirmPassword" />
+            <span asp-validation-for="ConfirmPassword"></span>
+        </div>
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </form>
+</body>
+</html>

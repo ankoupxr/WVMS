@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "仓库";
+}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md15">
+            <div class="layui-card">
+                <div class="layui-card-header">仓库信息</div>
+                <div class="layui-card-body">
+                    <div class="layui-form">
+                            <div class="layui-form-item">
+                                <div class="layui-col-md3" style="padding-left:0">
+                                    <div class="input-group">
+                                        <input type="text" id="keyWords" name="keyWords" placeholder="请输入关键词" autocomplete="off" class="layui-input">
+                                        <span class="input-group-btn">
+                                            <button class="layui-btn" id="search">
+                                                <i class="layui-icon layui-icon-search"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="layui-row">
+                        <table class="layui-table " lay-data="{page:true, id:'list'}" lay-filter="list">
+                            <thead>
+                                <tr>
+                                    <th lay-data="{checkbox:true, fixed: true,style:'height:80px;'}"></th>
+                                    <th lay-data="{ field: 'warehouseNo'}">仓库编号</th>
+                                    <th lay-data="{ field: 'warehouseName'}">仓库名称</th>
+                                    <th lay-data="{ field: 'createBy'}">创建人</th>
+                                    <th lay-data="{ field: 'createDate'}">创建时间</th>
+                                    <th lay-data="{ field: 'modifiedBy'}">编辑人</th>
+                                    <th lay-data="{ field: 'modifiedDate'}">编辑日期</th>
+                                    <th lay-data="{toolbar:'#tableoption',width:250, fixed: 'right'}">操作</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <script type="text/html" id="tableoption">
+                            <a class="layui-btn layui-btn-blue layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i> 编辑</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-close"></i> 删除</a>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scriptsfeet
+{
+<script type="text/javascript">
+    var ankou, table;
+        layui.config({
+            base: '/extention/' //自定义模块路径
+        }).use(['ankou', 'table', 'form'], function () {
+            var $ = layui.$;
+            ankou = layui.ankou;
+            table = layui.table;
+
+            //绑定数据
+            ankou.dataBind('@Url.Action("list", "warehouse")');
+
+            //表格排序
+            table.on('sort(list)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+                ankou.dataBind('@Url.Action("list", "warehouse")', {
+                    sortField: obj.field, //排序字段
+                    sortType: obj.type //排序方式
+                });
+            });
+            //搜索
+            $("#search").click(function () {
+                //绑定数据
+                ankou.dataBind('@Url.Action("list", "warehouse")' {
+                    keyWords: $.trim($("#keyWords").val())
+                });
+            });
+        });
+</script>
+}

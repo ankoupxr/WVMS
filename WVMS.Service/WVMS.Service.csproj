@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WVMS.IService\WVMS.IService.csproj" />
+    <ProjectReference Include="..\WVMS.Repository\WVMS.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,139 @@
+﻿
+@{
+    Layout = null;
+}
+@model LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>登录</title>
+        <link href="~/layui/css/layui.css" rel="stylesheet" />
+        <style type="text/css">
+
+            .container {
+                width: 420px;
+                height: 320px;
+                min-height: 320px;
+                max-height: 320px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                padding: 20px;
+                z-index: 130;
+                border-radius: 8px;
+                background-color: #fff;
+                box-shadow: 0 3px 18px rgba(100, 0, 0, .5);
+                font-size: 16px;
+            }
+
+            .close {
+                background-color: white;
+                border: none;
+                font-size: 18px;
+                margin-left: 410px;
+                margin-top: -10px;
+            }
+
+            .layui-input {
+                border-radius: 5px;
+                width: 300px;
+                height: 40px;
+                font-size: 15px;
+            }
+
+            .layui-form-item {
+                margin-left: -20px;
+            }
+
+            #logoid {
+                margin-top: -16px;
+                padding-left: 150px;
+                padding-bottom: 15px;
+            }
+
+            .layui-btn {
+                margin-left: -50px;
+                border-radius: 5px;
+                width: 350px;
+                height: 40px;
+                font-size: 15px;
+            }
+
+            .verity {
+                width: 120px;
+            }
+
+            .font-set {
+                font-size: 13px;
+                text-decoration: none;
+                margin-left: 120px;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+<body>
+    <form class="layui-form" method="post" asp-controller="Account" asp-action="Login"
+          asp-route-returnurl="@Model.ReturnUrl">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="container">
+            <button class="close" title="关闭">X</button>
+            <div class="layui-form-mid layui-word-aux"style=" text-align:center;">
+                欢迎
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-input-block"style=" text-align:left;"></br>用户名</label>
+                <div class="layui-input-block"style=" text-align:center;">
+                    <input asp-for="Username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input" />
+                </div>
+                <span asp-validation-for="Username"></span>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label"text-align:left></br>密 &nbsp;&nbsp;码</label>
+                <div class="layui-input-inline"style=" text-align:center;">
+                    <input asp-for="Password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-input-block"style=" text-align:left;">
+                <label asp-for="RememberMe"text-align:left>记住我</label>
+                <input asp-for="RememberMe" text-align:left/>
+                <span asp-validation-for="RememberMe"></span>
+            </div>
+            <div class="layui-form-item"style=" text-align:center;">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo"style=" text-align:center;">登陆</button>
+                </div>
+            </div>
+			   <a href="" class="font-set">忘记密码?</a>  <a asp-controller="Account" asp-action="Signup" class="font-set">立即注册</a>
+
+            </div>
+
+            </form>
+            <script src="~/layui/layui.js"></script>
+            <script>
+                layui.use(['form', 'layedit', 'laydate'], function () {
+                    var form = layui.form
+                        , layer = layui.layer
+                        , layedit = layui.layedit
+                        , laydate = layui.laydate
+                    form.on('submit(demo1)', function (data) {
+                        layer.alert(JSON.stringify(data.field), {
+                            title: '最终的提交信息'
+                        })
+                        return false;
+                    });
+                });
+            </script>
+                </body >
+</html >

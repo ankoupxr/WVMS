@@ -1,0 +1,71 @@
+﻿@model WVMS.Model.Stockin
+
+    <div class="layui-bgn" style="padding-bottom:20px;">
+        <form class="layui-form" style="padding: 20px 30px 0 0;">
+            <input type="hidden" asp-for="StockInId" />
+            <div class="layui-form-item">
+                <label class="layui-form-label">入库单号</label>
+                <div class="layui-input-block">
+                    <input type="text" asp-for="StockInNo" required lay-verify="required" placeholder="请输入入库单号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">入库类型</label>
+                <div class="layui-input-block">
+                    <input type="text" asp-for="StockInType" required lay-verify="required" placeholder="请输入入库类型" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">供应商</label>
+                <div class="layui-input-block">
+                    <input type="text" asp-for="SupplierId" required lay-verify="required" placeholder="请输入入库单号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">状态</label>
+                <div class="layui-input-block">
+                    <input type="text" asp-for="StockInStatus" required lay-verify="required" placeholder="请输入状态" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">备注</label>
+                <div class="layui-input-block">
+                    <input type="text" asp-for="Remark" required lay-verify="required" placeholder="请输入备注" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+
+            <div class="layui-form-item">
+                <div class="layui-col-xs4"></div>
+                <div class="layui-col-xs4">
+                    <button class="layui-btn" lay-submit lay-filter="edit" id="submit" type="button">提交</button>
+                    <button id="close" type="button" class="layui-btn layui-btn-primary">关闭</button>
+                </div>
+            </div>
+        </form>
+        </div>
+
+        @section scriptsfeet
+        {
+            <script type="text/javascript">
+        layui.config({
+            base: '/extention/' //自定义模块路径
+        }).use(['form', 'layer', 'ankou', 'upload'], function () {
+            var $ = layui.$, form = layui.form, ankou = layui.ankou, upload = layui.upload;
+
+            $("#close").click(function () {
+                ankou.close();
+            });
+
+            form.on('submit(edit)', function (obj) {
+                obj.field.stockinId = $("#stockinId").val();
+                //保存
+                ankou.save('@Url.Action("stockinedit","stockin")', obj.field);
+            });
+        });
+
+        //实例化编辑器
+        var ue = UE.getEditor('Description', {autoHeightEnabled: false});
+
+            </script>
+        }

@@ -1,0 +1,135 @@
+﻿@{
+    ViewData["Title"] = "入库管理";
+}
+
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15" >
+
+        <div class="layui-col-md15" >
+            <div class="layui-card">
+                <div class="layui-card-header">入库管理</div>
+                <div class="layui-card-body">
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <div class="input-group">
+                                    <input type="text" id="keyWords" name="keyWords" lay-verify="required" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+                                    <span class="input-group-btn">
+                                        <button class="layui-btn" id="search">
+                                            <i class="layui-icon layui-icon-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-btn-container">
+                            <div class="layui-btn-group">
+                                <button type="button" id="loading-example-btn" class="layui-btn layui-btn-sm layui-bg-cyan" onclick="window.location.href = window.location.href"><i class="layui-icon layui-icon-refresh"></i>刷新</button>
+                                <button id="add" type="button" class="layui-btn   layui-btn-sm layui-bg-green"><i class="layui-icon layui-icon-add-circle-fine"></i>添加</button>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="layui-table" lay-data="{page:true, id:'list'}" lay-filter="list" width="100%">
+                        <thead>
+                            <tr>
+                                <th lay-data="{checkbox:true, fixed: true}"></th>
+                                <th lay-data="{field:'stockInNo',width:150}">入库单号</th>
+                                <th lay-data="{field:'stockInType',width:100}">入库类型</th>
+                                <th lay-data="{field:'supplierId',width:100}">供应商</th>
+                                <th lay-data="{field:'orderNo',width:90}">订单号</th>
+                                <th lay-data="{field:'stockInStatus',templet: '#state',width:50}">状态</th>
+                                <th lay-data="{field:'remark',width:100}">备注</th>
+                                <th lay-data="{field:'createBy',width:50}">创建人</th>
+                                <th lay-data="{field:'createDate',width:150}">创建日期</th>
+                                <th lay-data="{field:'modifiedBy',width:50}">编辑人</th>
+                                <th lay-data="{field:'modifiedDate',width:150}">编辑日期</th>
+                                <th lay-data="{toolbar:'#tableoption',width:250, fixed: 'right'}">操作</th>
+
+                            </tr>
+                        </thead>
+                    </table>
+                    <script type="text/html" id="tableoption">
+                        <a class="layui-btn layui-btn-blue layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i> 编辑</a>
+                        <a class="layui-btn layui-btn-blue layui-btn-xs" lay-event="detail"><i class="layui-icon layui-icon-edit"></i> 详细</a>
+                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-close"></i> 删除</a>
+                    </script>
+                    <script type="text/html" id="state">
+                        {{# if(d.status === 0){ }}
+                        <span class="layui-badge layui-bg-green">已入库</span>
+                        {{# }else if(d.status === 1){ }}
+                        <span class="layui-badge layui-bg-orange">未入库</span>
+                        {{# }else{ }}
+                        <span class="layui-badge layui-bg-blue">未知</span>
+                        {{# } }}
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scriptsfeet
+{
+    <script type="text/javascript">
+    var ankou, table;
+        layui.config({
+            base: '/extention/' //自定义模块路径
+        }).use(['ankou', 'table', 'form'], function () {
+            var $ = layui.$;
+            ankou = layui.ankou;
+            table = layui.table;
+
+            //绑定数据
+            ankou.dataBind('@Url.Action("stockinList", "stockin")');
+
+            //添加
+            $("#add").click(function () {
+                ankou.openFull('添加入库单', '@Url.Action("stockinadd", "stockin")');
+            });
+
+            //批量删除
+            $("#deleteAll").click(function () {
+                ankou.batOperate('@Url.Action("deleteall", "stockin")', 'stockinId');
+            });
+
+            //监听表格行
+            table.on('tool(list)', function (obj) {
+                var data = obj.data; //获得当前行数据
+                if (obj.event === 'edit') {
+                    ankou.openFull('编辑', '@Url.Action("stockinedit", "stockin", new {})/' + data.stockinId);
+                } else if (obj.event === 'del') {
+                    ankou.operate("@Url.Action("stockindex", "stockin", new {})/" + data.stockinId);
+                }
+            });
+
+            //监听单元格编辑
+            table.on('edit(list)', function (obj) {
+                var value = obj.value, //得到修改后的值
+                    data = obj.data, //得到所在行所有键值
+                    field = obj.field; //得到字段
+                ankou.request("@Url.Action("stockinmodify", "stockin")?stockinId=" +data.stockinId +"&sort=" +value +"&field=" +field,"POST");
+            });
+
+            //表格排序
+            table.on('sort(list)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+                ankou.dataBind('@Url.Action("stockinlist", "stockin")', {
+                    sortField: obj.field, //排序字段
+                    sortType: obj.type //排序方式
+                });
+            });
+
+            //搜索
+            $("#search").click(function () {
+                //绑定数据
+                ankou.dataBind('@Url.Action("stockinlist", "stockin")', {
+                    keyWords: $.trim($("#keyWords").val()),
+                    status: $.trim($("#status").val())
+                }, true);
+            });
+        });
+
+    </script>
+}

@@ -1,0 +1,16 @@
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\bin\Debug\netcoreapp2.2\WVMS.Model.deps.json
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\bin\Debug\netcoreapp2.2\WVMS.Model.dll
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\bin\Debug\netcoreapp2.2\WVMS.Model.pdb
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\bin\Debug\netcoreapp2.2\WVMS.Infrastructure.dll
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\bin\Debug\netcoreapp2.2\WVMS.Infrastructure.pdb
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.xml
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\obj\Debug\netcoreapp2.2\WVMS.Model.csprojAssemblyReference.cache
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\obj\Debug\netcoreapp2.2\WVMS.Model.csproj.CoreCompileInputs.cache
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\obj\Debug\netcoreapp2.2\WVMS.Model.AssemblyInfoInputs.cache
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\obj\Debug\netcoreapp2.2\WVMS.Model.AssemblyInfo.cs
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\obj\Debug\netcoreapp2.2\WVMS.Model.csproj.CopyComplete
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\obj\Debug\netcoreapp2.2\WVMS.Model.dll
+C:\Users\13539\Desktop\1\WVMS\WVMS.Model\obj\Debug\netcoreapp2.2\WVMS.Model.pdb
